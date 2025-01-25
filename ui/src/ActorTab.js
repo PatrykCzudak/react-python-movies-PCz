@@ -7,7 +7,8 @@ import ActoresList from "./ActorList";
 function ActorTab() {
     const [actors, setActors] = useState([]);
     const [addingActor, setAddingActor] = useState(false);
-
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     async function handleAddActor(actor) {
         const response = await fetch('/actors/', {

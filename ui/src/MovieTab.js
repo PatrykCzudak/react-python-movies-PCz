@@ -9,7 +9,7 @@ function MovieTab() {
     const [movies, setMovies] = useState([]);
     const [addingMovie, setAddingMovie] = useState(false);
     const [connectionActMov, setConnectionActMov] = useState(false);
-
+    
 
     async function handleAddMovie(movie) {
         const response = await fetch('/movies/', {

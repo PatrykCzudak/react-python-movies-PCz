@@ -1,4 +1,4 @@
-import ActorListItem from "./ActorListItem";
+import { useState, useEffect } from "react";
 
 export default function MovieListConnection (props) {
     return (
@@ -12,8 +12,8 @@ export default function MovieListConnection (props) {
                 {' '}
             </div>
             <div>
-                <label for="movies">Select your favourite movies:</label>
-                <select id="movies" name="movies" multiple size="1">
+                <label for="movies">Select actors!@:</label>
+                <select id="actors" name="actors" multiple size="1">
                     <option>
 
                     </option>
