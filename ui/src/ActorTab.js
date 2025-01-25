@@ -26,7 +26,7 @@ function ActorTab() {
           method: 'DELETE',
         });
         if (response.ok) {
-            const nextActors = actor.filter(m => m !== actor);
+            const nextActors = actors.filter(m => m !== actor);
             setActors(nextActors);
         }
       }
