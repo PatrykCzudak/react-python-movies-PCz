@@ -62,7 +62,7 @@ function MovieTab() {
                 <MoviesList movies={movies} onDeleteMovie={handleDelMovie}/>
             }
             <div>
-              <button type="button" className="toggle-form" onClick={openConnectionActorFilm}>{connectionActMov ? "Hide Connection" : "Connect Actores with Movies"}</button>
+              <button type="button" className="toggle-form" onClick={openConnectionActorFilm}>{connectionActMov ? "Hide Assign Actors Form" : "Assign Actors"}</button>
               <button type="button" className="toggle-form" onClick={openAddFilm}>{addingMovie ? "Hide Form" : "Add a movie"}</button>
             </div>
             {addingMovie && <MovieForm onMovieSubmit={handleAddMovie} buttonLabel="Add a movie"/>}

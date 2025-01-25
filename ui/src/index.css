@@ -130,3 +130,46 @@ h1 {
   font-weight: bold;
   background-color: #495057;
 }
+
+.movie-connection-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.movie-info {
+  flex: 0 1 auto;
+}
+
+.actor-select-container {
+  flex: 1;
+  margin: 10px 0;
+}
+
+.actor-select-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.assign-button {
+  flex: 0 1 auto;
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.assign-button:hover {
+  background-color: #0056b3;
+}
+
+.actor-select-container select {
+  font-size: 12px;
+  height: 20px;
+  line-height: 1.5;
+}

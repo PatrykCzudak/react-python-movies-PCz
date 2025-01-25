@@ -14,7 +14,7 @@ export default function MovieForm(props) {
             return alert("Insert title!!!")
         } else if (title.length < 4) {
             return alert("Title is to short.")
-        } else if (title.length < 20) {
+        } else if (title.length < 50) {
             props.onMovieSubmit({title, year});
             setTitle('');
             setYear('');
