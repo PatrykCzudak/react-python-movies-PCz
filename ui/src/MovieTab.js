@@ -3,10 +3,12 @@ import {useState, useEffect} from "react";
 import "milligram";
 import MovieForm from "./MovieForm";
 import MoviesList from "./MoviesList";
+import ConnectionActMovForm from "./ConnectionActMov"
 
-function FilmTab() {
+function MovieTab() {
     const [movies, setMovies] = useState([]);
     const [addingMovie, setAddingMovie] = useState(false);
+    const [connectionActMov, setConnectionActMov] = useState(false);
 
 
     async function handleAddMovie(movie) {
@@ -46,6 +48,10 @@ function FilmTab() {
         setAddingMovie(!addingMovie)
       }
 
+      function openConnectionActorFilm() {
+        setConnectionActMov(!connectionActMov)
+      }
+
     return (
         <div>
             <h1>My favourite movies to watch</h1>
@@ -55,11 +61,15 @@ function FilmTab() {
                 : 
                 <MoviesList movies={movies} onDeleteMovie={handleDelMovie}/>
             }
-            <button type="button" className="toggle-form" onClick={openAddFilm}>{addingMovie ? "Hide Form" : "Add a movie"}</button>
+            <div>
+              <button type="button" className="toggle-form" onClick={openConnectionActorFilm}>{connectionActMov ? "Hide Connection" : "Connect Actores with Movies"}</button>
+              <button type="button" className="toggle-form" onClick={openAddFilm}>{addingMovie ? "Hide Form" : "Add a movie"}</button>
+            </div>
             {addingMovie && <MovieForm onMovieSubmit={handleAddMovie} buttonLabel="Add a movie"/>}
+            {connectionActMov && <ConnectionActMovForm movies={movies}/>}
         </div>
 
     );
 }
 
-export default FilmTab;
+export default MovieTab;

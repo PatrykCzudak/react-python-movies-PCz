@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from "react";
 import "milligram";
-import FilmTab from "./FilmTab";
+import MovieTab from "./MovieTab";
 import ActorTab from "./ActorTab";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
                 </button>
                 {
                     activeTab === 'films' ? 
-                    <FilmTab/>
+                    <MovieTab/>
                     : 
                     <ActorTab/> 
                 }

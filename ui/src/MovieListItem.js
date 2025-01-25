@@ -13,4 +13,4 @@ export default function MovieListItem(props) {
             {props.movie.description}
         </div>
     );
-}
+};
