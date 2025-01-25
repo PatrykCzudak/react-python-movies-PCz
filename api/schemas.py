@@ -19,6 +19,9 @@ class ActorBase(BaseModel):
 class ActorCreate(ActorBase):
     pass
 
+class AssignActor(BaseModel):
+    id: int
+
 
 class Actor(ActorBase):
     id: int

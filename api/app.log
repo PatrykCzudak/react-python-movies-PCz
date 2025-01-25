@@ -1,0 +1,22 @@
+2025-01-25 21:28:31,201 - INFO - Endpoint was hit for movie_id: 1
+2025-01-25 21:28:31,201 - INFO - Raw data received: id=7
+2025-01-25 21:29:07,432 - INFO - Endpoint was hit for movie_id: 1
+2025-01-25 21:29:07,432 - INFO - Raw data received: id=7
+2025-01-25 21:29:10,577 - INFO - Endpoint was hit for movie_id: 1
+2025-01-25 21:29:10,578 - INFO - Raw data received: id=7
+2025-01-25 21:29:24,575 - INFO - Endpoint was hit for movie_id: 1
+2025-01-25 21:29:24,575 - INFO - Raw data received: id=9
+2025-01-25 21:45:40,813 - INFO - Endpoint was hit for movie_id: 2
+2025-01-25 21:45:40,814 - INFO - Raw data received: id=5
+2025-01-25 21:46:07,322 - INFO - Endpoint was hit for movie_id: 3
+2025-01-25 21:46:07,322 - INFO - Raw data received: id=5
+2025-01-25 21:47:59,583 - INFO - Endpoint was hit for movie_id: 4
+2025-01-25 21:47:59,583 - INFO - Raw data received: id=5
+2025-01-25 21:55:59,406 - INFO - Endpoint was hit for movie_id: 2
+2025-01-25 21:55:59,407 - INFO - Raw data received: id=7
+2025-01-25 21:58:37,299 - INFO - Endpoint was hit for movie_id: 4
+2025-01-25 21:58:37,300 - INFO - Raw data received: id=1
+2025-01-25 21:59:55,408 - INFO - Endpoint was hit for movie_id: 4
+2025-01-25 21:59:55,408 - INFO - Raw data received: id=7
+2025-01-25 22:01:46,054 - INFO - Endpoint was hit for movie_id: 4
+2025-01-25 22:01:46,054 - INFO - Raw data received: id=2

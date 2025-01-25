@@ -1,11 +1,18 @@
 from typing import List
-
+import logging
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 import schemas
 import models
+
+logging.basicConfig(
+    filename="app.log",          
+    level=logging.INFO,           
+    format="%(asctime)s - %(levelname)s - %(message)s",  
+)
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="../ui/build/static", check_dir=False), name="static")
@@ -74,10 +81,12 @@ def delete_actor(actor_id: int):
     db_actor.delete_instance()
     return db_actor
 
-#usuwanie aktora
+#
 @app.post("/movies/{movie_id}/actors", response_model=schemas.Movie)
-def add_actor_to_movie(movie_id: int, actor_id: int):
-    
+def add_actor_to_movie(movie_id: int, data: schemas.AssignActor):
+    logger.info(f"Endpoint was hit for movie_id: {movie_id}")
+    logger.info(f"Raw data received: {data}")
+    actor_id = data.id
     ## pobrane movie
     db_movie = models.Movie.filter(models.Movie.id == movie_id).first()
     if db_movie is None:
@@ -95,3 +104,11 @@ def add_actor_to_movie(movie_id: int, actor_id: int):
     db_movie.actors.add(db_actors)
     
     return db_movie
+
+#wyświetl aktorów
+@app.get("/movies/{movie_id}/actors", response_model=List[schemas.Actor])
+def get_movie_actors(movie_id: int):
+    db_movie = models.Movie.filter(models.Movie.id == movie_id).first()
+    if db_movie is None:
+        raise HTTPException(status_code=404, detail="Movie not found")
+    return list(db_movie.actors)
