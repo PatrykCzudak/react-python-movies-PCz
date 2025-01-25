@@ -8,34 +8,46 @@ export default function MovieForm(props) {
 
     function addMovie(event) {
         event.preventDefault();
-        if (title.length < 5) {
-            return alert('Tytuł jest za krótki');
-        }
+        if (year === "") {
+            return alert("Insert year!!!")
+        } else if (title === "") {
+            return alert("Insert title!!!")
+        } else if (title.length < 4) {
+            return alert("Title is to short.")
+        } else if (title.length < 20) {
+            props.onMovieSubmit({title, year});
+            setTitle('');
+            setYear('');
+            setDirector('');
+            setDescription('');
+        } else {
+            return alert("Title is to long")
+        };
         props.onMovieSubmit({title, year, director, description});
-        setTitle('');
-        setYear('');
-        setDirector('');
-        setDescription('');
     }
 
-    return <form onSubmit={addMovie}>
-        <h2>Add movie</h2>
-        <div>
-            <label>Tytuł</label>
-            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>
-        </div>
-        <div>
-            <label>Year</label>
-            <input type="text" value={year} onChange={(event) => setYear(event.target.value)}/>
-        </div>
-        <div>
-            <label>Director</label>
-            <input type="text" value={director} onChange={(event) => setDirector(event.target.value)}/>
-        </div>
-        <div>
-            <label>Description</label>
-            <textarea value={description} onChange={(event) => setDescription(event.target.value)}/>
-        </div>
-        <button>{props.buttonLabel || 'Submit'}</button>
-    </form>;
+    return (
+        <dir className="form-container">
+            <form onSubmit={addMovie}>
+                <h2 className="form-header">Add movie</h2>
+                <div className="form-group"> 
+                    <label htmlFor="title" className="form-label">Title</label>
+                    <input type="text" className="form-input" value={title} onChange={(event) => setTitle(event.target.value)}/>
+                </div>
+                <div>
+                    <label htmlFor="year" className="form-label">Year</label>
+                    <input type="text" className="form-input" value={year} onChange={(event) => setYear(event.target.value)}/>
+                </div>
+                <div>
+                    <label htmlFor="director" className="form-label">Director</label>
+                    <input type="text" className="form-input" value={director} onChange={(event) => setDirector(event.target.value)}/>
+                </div>
+                <div>
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <textarea value={description} className="form-input" onChange={(event) => setDescription(event.target.value)}/>
+                </div>
+                <button>{props.buttonLabel || 'Submit'}</button>
+            </form>;
+        </dir>
+    )
 }

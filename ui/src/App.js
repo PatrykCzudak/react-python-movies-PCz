@@ -1,31 +1,40 @@
 import './App.css';
 import {useState} from "react";
 import "milligram";
-import MovieForm from "./MovieForm";
-import MoviesList from "./MoviesList";
+import FilmTab from "./FilmTab";
+import ActorTab from "./ActorTab";
 
 function App() {
-    const [movies, setMovies] = useState([]);
-    const [addingMovie, setAddingMovie] = useState(false);
+    const [activeTab, setActiveTab] = useState('films');
 
-    function handleAddMovie(movie) {
-        setMovies([...movies, movie]);
-        setAddingMovie(false);
-    }
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+    };
+
 
     return (
-        <div className="container">
-            <h1>My favourite movies to watch</h1>
-            {movies.length === 0
-                ? <p>No movies yet. Maybe add something?</p>
-                : <MoviesList movies={movies}
-                              onDeleteMovie={(movie) => setMovies(movies.filter(m => m !== movie))}
-                />}
-            {addingMovie
-                ? <MovieForm onMovieSubmit={handleAddMovie}
-                             buttonLabel="Add a movie"
-                />
-                : <button onClick={() => setAddingMovie(true)}>Add a movie</button>}
+        <div className="app-container">
+            <div className="tabs">
+
+                <button 
+                    className={activeTab === 'films' ? 'active' : ''} 
+                    onClick={() => handleTabChange('films')}
+                >
+                    Films
+                </button>
+                <button 
+                    className={activeTab === 'actors' ? 'active' : ''} 
+                    onClick={() => handleTabChange('actors')}
+                >
+                    Actors
+                </button>
+                {
+                    activeTab === 'films' ? 
+                    <FilmTab/>
+                    : 
+                    <ActorTab/> 
+                }
+            </div>
         </div>
     );
 }
