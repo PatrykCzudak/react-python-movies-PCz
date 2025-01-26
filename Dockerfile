@@ -7,7 +7,7 @@ COPY ui/src /var/app/ui/src
 COPY ui/public /var/app/ui/public
 RUN npm run build
 
-FROM python:3.10
+FROM python:3.11.11
 COPY --from=frontend /var/app/ui/build /var/app/ui/build
 COPY api/requirements.txt /var/app/api/requirements.txt
 WORKDIR /var/app/api
