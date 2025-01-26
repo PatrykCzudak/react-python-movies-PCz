@@ -280,3 +280,4 @@
 2025-01-26 14:38:18,441 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
 2025-01-26 14:39:45,685 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
 2025-01-26 14:41:13,941 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-01-26 14:54:57,119 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
