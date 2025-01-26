@@ -3,6 +3,7 @@ import {useState} from "react";
 import "milligram";
 import MovieTab from "./MovieTab";
 import ActorTab from "./ActorTab";
+import SearchTab from "./SearchTab";
 
 function App() {
     const [activeTab, setActiveTab] = useState('films');
@@ -28,11 +29,20 @@ function App() {
                 >
                     Actors
                 </button>
+                <button 
+                    className={activeTab === 'search' ? 'active' : ''} 
+                    onClick={() => handleTabChange('search')}
+                >
+                    Search
+                </button>
                 {
                     activeTab === 'films' ? 
                     <MovieTab/>
                     : 
-                    <ActorTab/> 
+                    activeTab === 'actors' ? 
+                    <ActorTab/>
+                    :
+                    <SearchTab/>
                 }
             </div>
         </div>

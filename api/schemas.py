@@ -15,6 +15,9 @@ class ActorBase(BaseModel):
     name: str
     surname: str
 
+class Search(BaseModel):
+    query: str
+    limit: int
 
 class ActorCreate(ActorBase):
     pass
@@ -35,6 +38,9 @@ class MovieBase(BaseModel):
     year: int
     director: str
     description: Union[str, None] = None
+
+class SearchResults(BaseModel):
+    movies: List[MovieBase]
 
 
 class MovieCreate(MovieBase):
