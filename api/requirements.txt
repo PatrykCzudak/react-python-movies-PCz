@@ -1,3 +1,4 @@
+python>=3.10
 fastapi==0.115.6
 peewee==3.17.8
 uvicorn==0.34.0
