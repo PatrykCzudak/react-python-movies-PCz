@@ -281,3 +281,106 @@
 2025-01-26 14:39:45,685 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
 2025-01-26 14:41:13,941 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
 2025-01-26 14:54:57,119 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-01-26 21:05:44,475 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-01-26 21:05:44,857 - INFO - Use pytorch device_name: cuda
+2025-01-26 21:05:44,857 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-01-26 21:07:05,013 - INFO - Endpoint was hit for movie_id: 1
+2025-01-26 21:07:05,013 - INFO - Raw data received: id=10
+2025-01-26 21:09:35,648 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-01-26 21:10:08,379 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-01-26 21:10:28,468 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-02-12 20:05:12,181 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 404 Not Found"
+2025-02-12 20:05:12,496 - INFO - Use pytorch device_name: cuda
+2025-02-12 20:05:12,496 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-12 20:07:29,477 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 404 Not Found"
+2025-02-12 20:35:30,961 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 404 Not Found"
+2025-02-12 20:35:31,139 - INFO - Use pytorch device_name: cuda
+2025-02-12 20:35:31,139 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-12 23:02:34,677 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:02:34,678 - INFO - Raw data received: id=1
+2025-02-12 23:02:40,096 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:02:40,096 - INFO - Raw data received: id=2
+2025-02-12 23:03:06,359 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:03:06,359 - INFO - Raw data received: id=2
+2025-02-12 23:11:28,124 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:11:28,125 - INFO - Raw data received: id=1
+2025-02-12 23:11:46,840 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:11:46,840 - INFO - Raw data received: id=2
+2025-02-12 23:19:04,865 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:19:04,866 - INFO - Raw data received: id=1
+2025-02-12 23:20:47,186 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:20:47,186 - INFO - Raw data received: id=1
+2025-02-12 23:20:54,399 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:20:54,399 - INFO - Raw data received: id=2
+2025-02-12 23:25:54,607 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:25:54,610 - INFO - Raw data received: id=1
+2025-02-12 23:26:11,162 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:26:11,163 - INFO - Raw data received: id=2
+2025-02-12 23:26:14,205 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:26:14,205 - INFO - Raw data received: id=2
+2025-02-12 23:26:16,327 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:26:16,327 - INFO - Raw data received: id=2
+2025-02-12 23:26:19,113 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:26:19,113 - INFO - Raw data received: id=2
+2025-02-12 23:26:51,149 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:26:51,149 - INFO - Raw data received: id=1
+2025-02-12 23:32:36,380 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-12 23:32:36,537 - INFO - Use pytorch device_name: cuda
+2025-02-12 23:32:36,537 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-12 23:32:41,262 - INFO - Endpoint was hit for movie_id: 1
+2025-02-12 23:32:41,262 - INFO - Raw data received: id=1
+2025-02-12 23:33:50,339 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:33:50,339 - INFO - Raw data received: id=11
+2025-02-12 23:47:41,276 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:47:41,276 - INFO - Raw data received: id=2
+2025-02-12 23:53:06,919 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:53:06,919 - INFO - Raw data received: id=2
+2025-02-12 23:53:16,642 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:53:16,643 - INFO - Raw data received: id=1
+2025-02-12 23:57:18,876 - INFO - Endpoint was hit for movie_id: 5
+2025-02-12 23:57:18,877 - INFO - Raw data received: id=3
+2025-02-13 00:00:19,603 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 00:00:19,605 - INFO - Raw data received: id=9
+2025-02-13 00:06:55,097 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 00:06:55,323 - INFO - Use pytorch device_name: cuda
+2025-02-13 00:06:55,323 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 00:08:53,634 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-02-13 00:09:02,183 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-02-13 20:23:19,271 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 20:23:19,423 - INFO - Use pytorch device_name: cuda
+2025-02-13 20:23:19,424 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 20:28:10,871 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 20:28:11,004 - INFO - Use pytorch device_name: cuda
+2025-02-13 20:28:11,004 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 20:28:19,398 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 20:28:19,623 - INFO - Use pytorch device_name: cuda
+2025-02-13 20:28:19,623 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 20:35:14,605 - INFO - Endpoint was hit for movie_id: 6
+2025-02-13 20:35:14,605 - INFO - Raw data received: id=1
+2025-02-13 20:39:01,641 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 20:39:01,834 - INFO - Use pytorch device_name: cuda
+2025-02-13 20:39:01,835 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 20:39:08,363 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 20:39:08,521 - INFO - Use pytorch device_name: cuda
+2025-02-13 20:39:08,521 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 21:10:25,154 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 21:10:25,155 - INFO - Raw data received: id=1
+2025-02-13 21:10:30,670 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 21:10:30,670 - INFO - Raw data received: id=1
+2025-02-13 21:10:30,994 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 21:10:30,995 - INFO - Raw data received: id=7
+2025-02-13 21:14:04,159 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 21:14:04,159 - INFO - Raw data received: id=11
+2025-02-13 21:14:23,374 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 21:14:23,374 - INFO - Raw data received: id=9
+2025-02-13 21:35:52,201 - INFO - Endpoint was hit for movie_id: 4
+2025-02-13 21:35:52,202 - INFO - Raw data received: id=11
+2025-02-13 21:40:04,155 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 21:40:04,335 - INFO - Use pytorch device_name: cuda
+2025-02-13 21:40:04,335 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 21:40:11,107 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 21:40:11,260 - INFO - Use pytorch device_name: cuda
+2025-02-13 21:40:11,260 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 21:40:18,483 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-02-13 21:40:18,633 - INFO - Use pytorch device_name: cuda
+2025-02-13 21:40:18,633 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2

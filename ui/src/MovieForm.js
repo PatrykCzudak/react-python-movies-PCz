@@ -47,7 +47,7 @@ export default function MovieForm(props) {
                     <textarea value={description} className="form-input" onChange={(event) => setDescription(event.target.value)}/>
                 </div>
                 <button>{props.buttonLabel || 'Submit'}</button>
-            </form>;
+            </form>
         </dir>
     )
 }

@@ -4,7 +4,6 @@ import Select from "react-select";
 export default function MovieListConnection(props) {
     const [actors, setActors] = useState([]);
     const [selectedActors, setSelectedActors] = useState([]);
-    
 
     useEffect(() => {
         const fetchActors = async () => {
@@ -19,12 +18,10 @@ export default function MovieListConnection(props) {
         fetchActors();
     }, []);
 
-    // Format actors for react-select
     const actorOptions = actors.map(actor => ({
         value: actor.id,
         label: `${actor.name} ${actor.surname}`,
     }));
-
 
     const handleAssignActors = async () => {
         for (const actor of selectedActors) {
@@ -35,28 +32,22 @@ export default function MovieListConnection(props) {
             });
             if (!response.ok) {
                 console.error(`Failed to assign actor ${actor.label} to movie ${props.movie.title}`);
-            }
+            }  
         }
-        alert("Actors assigned successfully!");
+        props.onActorsUpdated();
     };
 
     return (
         <div className="movie-connection-container">
-            <div className="movie-info">
-                <strong>{props.movie.title}</strong>
-                {' '}
-                <span>({props.movie.year})</span>
-                {' '}
-                directed by {props.movie.director}
-            </div>
             <div className="actor-select-container">
                 <Select
                     id="actors-select"
                     options={actorOptions}
                     isMulti
-                    placDXeholder="Choose actors..."
+                    placeholder="Choose actors..."
                     onChange={setSelectedActors}
-                    
+                    menuPortalTarget={document.body}
+                    styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
                 />
             </div>
             <button onClick={handleAssignActors} className="toggle-form">
@@ -65,4 +56,3 @@ export default function MovieListConnection(props) {
         </div>
     );
 }
-

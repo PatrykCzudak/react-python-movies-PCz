@@ -1,15 +1,17 @@
+import { motion } from "framer-motion";
+
 export default function ActorListItem(props) {
     return (
-        <div>
-            <div>
-                <strong>{props.actor.id}</strong>
-                {' '}
-                <strong>{props.actor.name}</strong>
-                {' '}
-                <strong>{props.actor.surname}</strong>
-                {' '}
-                <a onClick={props.onDelete}>Delete</a>
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="card actor-card"
+        >
+            <div className="actor-info">
+                <h3>{props.actor.name} {props.actor.surname}</h3>
             </div>
-        </div>
+            <button onClick={props.onDelete} className="delete-button">❌</button>
+        </motion.div>
     );
 }

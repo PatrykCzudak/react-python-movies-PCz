@@ -45,6 +45,7 @@ def delete_movie(movie_id: int):
     db_movie = models.Movie.filter(models.Movie.id == movie_id).first()
     if db_movie is None:
         raise HTTPException(status_code=404, detail="Movie not found")
+    db_movie.actors.clear()
     db_movie.delete_instance()
     return db_movie
 
@@ -81,7 +82,7 @@ def delete_actor(actor_id: int):
     db_actor.delete_instance()
     return db_actor
 
-#
+#przypisz aktorów
 @app.post("/movies/{movie_id}/actors", response_model=schemas.Movie)
 def add_actor_to_movie(movie_id: int, data: schemas.AssignActor):
     logger.info(f"Endpoint was hit for movie_id: {movie_id}")
@@ -113,7 +114,7 @@ def get_movie_actors(movie_id: int):
         raise HTTPException(status_code=404, detail="Movie not found")
     return list(db_movie.actors)
 
-
+#baza danych vektorowa
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue
 from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient

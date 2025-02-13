@@ -5,7 +5,7 @@ export default function ConnectionActMovForm(props) {
         <h2>Assign Actors</h2>
         <ul className="movies-list">
             {props.movies.map(movie => <li key={movie.title}>
-                <MovieListConnection movie={movie}/>
+                <MovieListConnection movie={movie} onUpdateActors={props.onUpdateActors}/>
             </li>)}
         </ul>
     </div>;

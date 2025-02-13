@@ -32,7 +32,7 @@ export default function ActorForm(props) {
                     <input type="text" className="form-input" value={surname} onChange={(event) => setSurname(event.target.value)}/>
                 </div>
                 <button>{props.buttonLabel || 'Submit'}</button>
-            </form>;
+            </form>
         </dir>
     )
 }

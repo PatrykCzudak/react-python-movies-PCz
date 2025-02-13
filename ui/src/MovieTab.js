@@ -2,13 +2,13 @@ import './App.css';
 import {useState, useEffect} from "react";
 import "milligram";
 import MovieForm from "./MovieForm";
+import Modal from "react-modal";
 import MoviesList from "./MoviesList";
-import ConnectionActMovForm from "./ConnectionActMov"
 
 function MovieTab() {
     const [movies, setMovies] = useState([]);
     const [addingMovie, setAddingMovie] = useState(false);
-    const [connectionActMov, setConnectionActMov] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     
 
     async function handleAddMovie(movie) {
@@ -31,6 +31,7 @@ function MovieTab() {
             const nextMovies = movies.filter(m => m !== movie);
             setMovies(nextMovies);
         }
+        setIsModalOpen(false);
       }
 
     useEffect(() => {
@@ -48,25 +49,29 @@ function MovieTab() {
         setAddingMovie(!addingMovie)
       }
 
-      function openConnectionActorFilm() {
-        setConnectionActMov(!connectionActMov)
-      }
-
     return (
         <div>
             <h1>My favourite movies to watch</h1>
+            <div>
+              <button type="button" className="toggle-form" onClick={() => setIsModalOpen(true)}>Add a movie</button>
+            </div>
+            <Modal 
+                isOpen={isModalOpen} 
+                onRequestClose={() => setIsModalOpen(false)} 
+                className="modal"
+            >
+                <h2>Add a New Movie</h2>
+                <MovieForm onMovieSubmit={handleAddMovie} buttonLabel="Add a movie"/>
+                <button onClick={() => setIsModalOpen(false)} className="close-button">
+                    Close
+                </button>
+            </Modal>
             {
                 movies.length === 0 ? 
                 <p>No movies yet. Maybe add something?</p> 
                 : 
                 <MoviesList movies={movies} onDeleteMovie={handleDelMovie}/>
             }
-            <div>
-              <button type="button" className="toggle-form" onClick={openConnectionActorFilm}>{connectionActMov ? "Hide Assign Actors Form" : "Assign Actors"}</button>
-              <button type="button" className="toggle-form" onClick={openAddFilm}>{addingMovie ? "Hide Form" : "Add a movie"}</button>
-            </div>
-            {addingMovie && <MovieForm onMovieSubmit={handleAddMovie} buttonLabel="Add a movie"/>}
-            {connectionActMov && <ConnectionActMovForm movies={movies}/>}
         </div>
 
     );
