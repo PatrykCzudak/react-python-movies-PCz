@@ -387,3 +387,7 @@
 2025-02-13 21:44:15,961 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
 2025-02-13 21:55:15,828 - INFO - Endpoint was hit for movie_id: 5
 2025-02-13 21:55:15,828 - INFO - Raw data received: id=1
+2025-02-13 22:20:07,743 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 22:20:07,744 - INFO - Raw data received: id=2
+2025-02-13 22:20:08,080 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 22:20:08,080 - INFO - Raw data received: id=7

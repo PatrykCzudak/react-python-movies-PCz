@@ -20,6 +20,7 @@ function MovieTab() {
         if (response.ok) {
           setMovies([...movies, movie]);
           setAddingMovie(false);
+          setIsModalOpen(false);
         }
       }
 
@@ -62,7 +63,7 @@ function MovieTab() {
             >
                 <h2>Add a New Movie</h2>
                 <MovieForm onMovieSubmit={handleAddMovie} buttonLabel="Add a movie"/>
-                <button onClick={() => setIsModalOpen(false)} className="close-button">
+                <button onClick={() => setIsModalOpen(false) } className="close-button">
                     Close
                 </button>
             </Modal>
