@@ -29,12 +29,15 @@ function App() {
                 >
                     Actors
                 </button>
-                <button 
-                    className={activeTab === 'search' ? 'active' : ''} 
-                    onClick={() => handleTabChange('search')}
-                >
-                    Search
-                </button>
+                <div className="tooltip-container">
+                    <button 
+                        className="disabled-button" 
+                        disabled
+                    >
+                        Search
+                    </button>
+                    <span className="tooltip">Not available on this platform</span>
+                </div>
                 {
                     activeTab === 'films' ? 
                     <MovieTab/>

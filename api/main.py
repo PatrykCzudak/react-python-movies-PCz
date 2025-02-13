@@ -114,38 +114,39 @@ def get_movie_actors(movie_id: int):
         raise HTTPException(status_code=404, detail="Movie not found")
     return list(db_movie.actors)
 
-#baza danych vektorowa
-from qdrant_client.http.models import Filter, FieldCondition, MatchValue
-from sentence_transformers import SentenceTransformer
-from qdrant_client import QdrantClient
-
-
-qdrant_client = QdrantClient(
-    url="https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io", 
-    api_key="zQM1p21iOtdl60K2LiXMDwxtofTP3zXZxxmZsJGaGi1GWBF8VcFLlQ",
-)
-
-encoder = SentenceTransformer("all-MiniLM-L6-v2")
-
-@app.post("/search/" )
-def search_movies(data: schemas.Search):
-    query = data.query
-    limit = data.limit
-    query_vector = encoder.encode([query])[0]
-
-    results = qdrant_client.search(
-        collection_name="movies",
-        query_vector=query_vector,
-        limit=limit
-    )
-
-    movies = [
-        {
-            "title": result.payload["title"],
-            "year": result.payload["year"],
-            "director": result.payload["director"],
-            "description": result.payload["description"]       
-        }
-        for result in results
-    ]
-    return movies
+##baza danych vektorowa
+#from qdrant_client.http.models import Filter, FieldCondition, MatchValue
+#from sentence_transformers import SentenceTransformer
+#from qdrant_client import QdrantClient
+#
+#
+#qdrant_client = QdrantClient(
+#    url="https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io", 
+#    api_key="zQM1p21iOtdl60K2LiXMDwxtofTP3zXZxxmZsJGaGi1GWBF8VcFLlQ",
+#)
+#
+#encoder = SentenceTransformer("all-MiniLM-L6-v2")
+#
+#@app.post("/search/" )
+#def search_movies(data: schemas.Search):
+#    query = data.query
+#    limit = data.limit
+#    query_vector = encoder.encode([query])[0]
+#
+#    results = qdrant_client.search(
+#        collection_name="movies",
+#        query_vector=query_vector,
+#        limit=limit
+#    )
+#
+#    movies = [
+#        {
+#            "title": result.payload["title"],
+#            "year": result.payload["year"],
+#            "director": result.payload["director"],
+#            "description": result.payload["description"]       
+#        }
+#        for result in results
+#    ]
+#    return movies
+#

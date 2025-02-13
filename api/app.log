@@ -384,3 +384,6 @@
 2025-02-13 21:40:18,483 - INFO - HTTP Request: GET https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
 2025-02-13 21:40:18,633 - INFO - Use pytorch device_name: cuda
 2025-02-13 21:40:18,633 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-02-13 21:44:15,961 - INFO - HTTP Request: POST https://e15a0be7-90ca-491a-8bbb-ce2eae999b65.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/movies/points/search "HTTP/1.1 200 OK"
+2025-02-13 21:55:15,828 - INFO - Endpoint was hit for movie_id: 5
+2025-02-13 21:55:15,828 - INFO - Raw data received: id=1

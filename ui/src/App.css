@@ -174,3 +174,40 @@ ul.movies-list {
 .close-button:hover {
   background: darkred;
 }
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.disabled-button {
+  background: grey;
+  color: white;
+  border: none;
+  padding: 0px 16px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
